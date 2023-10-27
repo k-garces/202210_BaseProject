@@ -5,6 +5,7 @@ import { DebugElement } from '@angular/core';
 
 import { BookListComponent } from './book-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('BookListComponent', () => {
   let component: BookListComponent;
@@ -12,6 +13,7 @@ describe('BookListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [ BookListComponent ]
     })
     .compileComponents();
