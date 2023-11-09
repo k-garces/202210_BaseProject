@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Editorial } from './editorial';
-import { EditorialService } from './editorial.service';
+import { Editorial } from '../editorial';
+import { EditorialService } from '../editorial.service';
 
 @Component({
-  selector: 'app-editorial',
-  templateUrl: './editorial.component.html',
-  styleUrls: ['./editorial.component.css']
+  selector: 'app-editorial-list',
+  templateUrl: './editorial-list.component.html',
+  styleUrls: ['./editorial-list.component.css']
 })
-export class EditorialComponent implements OnInit {
+export class EditorialListComponent implements OnInit {
 
   editorials: Array<Editorial> = [];
   constructor(private editorialService: EditorialService) { }

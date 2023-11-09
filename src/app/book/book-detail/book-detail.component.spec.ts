@@ -8,6 +8,9 @@ import { Editorial } from 'src/app/editorial/editorial';
 import { Author } from 'src/app/author/author';
 import { BookDetail } from '../bookDetail';
 import { faker } from '@faker-js/faker';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterTestingModule } from '@angular/router/testing';
+import { BookService } from '../book.service';
 
 describe('BookDetailComponent', () => {
   let component: BookDetailComponent;
@@ -15,7 +18,9 @@ describe('BookDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BookDetailComponent ]
+      declarations: [ BookDetailComponent ],
+      imports : [HttpClientModule, RouterTestingModule],
+      providers: [BookService]
     })
     .compileComponents();
   }));
