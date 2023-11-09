@@ -31,7 +31,8 @@ describe('BookDetailComponent', () => {
 
     const editorial = new Editorial(
       faker.datatype.number(),
-      faker.lorem.sentence()
+      faker.lorem.sentence(),
+      []
     );
  
     const authors: Author[] = [];
