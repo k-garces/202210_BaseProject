@@ -8,14 +8,13 @@ const routes: Routes = [{
   path: 'authors',
   children: [
     {
-      path: ':list',
+      path: 'list',
       component: AuthorListComponent
     },
     {
       path: ':id',
       component: AuthorDetailComponent
     }
-    
   ]
 }];
 
